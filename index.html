@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Sky Shield – משחק יירוט</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="ui">
+      <div class="topbar">
+        <div class="brand">🛡️ Sky Shield</div>
+
+        <div class="stats">
+          <div class="pill">ניקוד: <span id="score">0</span></div>
+<div class="pill">בניינים שנפגעו: <span id="misses">0</span>/10</div>
+          <div class="pill">קומבו: <span id="combo">x1</span></div>
+        </div>
+
+        <div class="controls">
+          <label class="select">
+            קושי:
+            <select id="difficulty">
+              <option value="easy">קל</option>
+              <option value="normal" selected>רגיל</option>
+              <option value="hard">קשה</option>
+            </select>
+          </label>
+
+          <button id="startBtn" class="btn primary">התחל</button>
+          <button id="pauseBtn" class="btn">Pause</button>
+          <button id="muteBtn" class="btn">🔇</button>
+        </div>
+      </div>
+
+      <div class="hint">
+        מכוונים עם העכבר • יורים עם קליק/Space • Pause עם P • מצב רגוע עם C
+      </div>
+    </div>
+
+    <canvas id="game" aria-label="Sky Shield game canvas"></canvas>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="card">
+        <h1 id="overlayTitle">Sky Shield</h1>
+        <p id="overlayText">לחצי על “התחל” כדי לשחק.</p>
+        <div class="row">
+          <button id="overlayBtn" class="btn primary">שחק</button>
+          <button id="overlayClose" class="btn">סגור</button>
+        </div>
+        <p class="small">
+          טיפ להורים: אפשר להגדיר “קל” ומצב רגוע (C) אם יש מתח/אזעקות.
+        </p>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
